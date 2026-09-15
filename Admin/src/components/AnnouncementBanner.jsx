@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaBell, FaInfoCircle, FaExclamationTriangle, FaCheckCircle, FaTimesCircle, FaTimes } from 'react-icons/fa';
+import { API_BASE_URL } from '../services/api';
 import './AnnouncementBanner.css';
 
 const AnnouncementBanner = ({ onAnnouncementClick }) => {
@@ -23,7 +24,7 @@ const AnnouncementBanner = ({ onAnnouncementClick }) => {
 
     const fetchActiveAnnouncements = async () => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/announcements/active`);
+            const response = await fetch(`${API_BASE_URL}/announcements/active`);
             const data = await response.json();
             if (data.success && data.announcements.length > 0) {
                 setAnnouncements(data.announcements);

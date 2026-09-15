@@ -42,26 +42,31 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
-    const { identifier, password } = req.body; // identifier can be email or phone
+    const { identifier, email, username, phone, password } = req.body || {};
+    const id = (identifier || email || username || phone || '').toString().trim();
+
+    if (!id || !password) {
+        return res.status(400).json({ message: 'Please provide email or phone, and password' });
+    }
 
     try {
-        // Check if identifier is email or phone
-        const isEmail = identifier.includes('@');
-        const query = isEmail ? { email: identifier } : { phone: identifier };
+        const isEmail = id.includes('@');
+        const query = isEmail ? { email: id.toLowerCase() } : { phone: id };
 
-        const user = await User.findOne(query);
+        let user = await User.findOne(query);
+        if (!user && isEmail) {
+            user = await User.findOne({ email: { $regex: new RegExp(`^${id}$`, 'i') } });
+        }
 
         if (user && (await user.matchPassword(password))) {
-            // Check if user is active
             if (!user.isActive) {
                 return res.status(403).json({ message: 'Your account has been deactivated. Please contact administrator.' });
             }
 
-            // Track last login
             user.lastLogin = new Date();
             await user.save({ validateModifiedOnly: true });
 
-            res.json({
+            return res.json({
                 _id: user._id,
                 name: user.name,
                 email: user.email,
@@ -70,10 +75,10 @@ exports.loginUser = async (req, res) => {
                 token: generateToken(user._id),
             });
         } else {
-            res.status(401).json({ message: 'Invalid credentials' });
+            return res.status(401).json({ message: 'Invalid credentials' });
         }
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 };
 

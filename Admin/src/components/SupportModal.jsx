@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaTimes, FaLifeRing } from 'react-icons/fa';
 import { toast } from 'sonner';
+import { API_BASE_URL } from '../services/api';
 import './SupportModal.css';
 
 const SupportModal = ({ isOpen, onClose }) => {
@@ -52,7 +53,7 @@ const SupportModal = ({ isOpen, onClose }) => {
                 description: formData.description
             };
 
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/support`, {
+            const response = await fetch(`${API_BASE_URL}/support`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
