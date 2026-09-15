@@ -1,0 +1,75 @@
+# Lifebridge Medical Center — llms.txt
+# AI/LLM Crawler Information
+# Last updated: 2026-03-05
+
+## Site Overview
+Lifebridge Medical Center is a premier multi-specialty hospital located in New Delhi, India.
+Type: Hospital / Healthcare Provider / Medical Organization
+
+## Key Information
+- Name: Lifebridge Medical Center
+- Tagline: Your Health, Our Priority
+- Location: 123 Healthcare Avenue, Medical District, New Delhi 110001, India
+- Phone: +91-9876543210
+- Emergency: 108
+- Email: info@lifebridgemedical.com
+
+## Services & Departments
+- Cardiology (Heart & Cardiovascular Care)
+- Neurology (Brain & Nervous System)
+- Orthopedics (Bone & Joint Care)
+- Pediatrics (Child Healthcare)
+- Oncology (Cancer Treatment)
+- Dermatology (Skin Care)
+- Gynecology (Women's Health)
+- Ophthalmology (Eye Care)
+- ENT (Ear, Nose & Throat)
+- Pulmonology (Lung & Respiratory)
+- Gastroenterology (Digestive Health)
+- Urology (Urinary System)
+- General Medicine
+- Emergency Medicine (24/7 ER)
+- Radiology & Diagnostics
+
+## Pages Available
+- Home: /
+- About Us: /about
+- Departments: /departments
+- Doctors: /doctors
+- Services & Treatments: /services
+- Patient Services: /patient-services
+- Book Appointment: /book-appointment
+- Blog & Health Articles: /blog
+- Announcements: /announcements
+- Contact Us: /contact
+- Emergency: /emergency
+- FAQs: /faqs
+- Symptom Checker (AI): /symptom-checker
+- Privacy Policy: /privacy
+- Terms of Service: /terms
+
+## Features
+- AI-powered Symptom Checker
+- AI Chat Support Widget
+- Online Appointment Booking
+- 24/7 Emergency Services
+- Patient Portal
+- Health Blog & Resources
+- Interactive Department Finder
+- Doctor Directory with Filtering
+
+## Technical Stack
+- Frontend: React 18, Vite 5, Tailwind CSS 3, Framer Motion
+- UI: Headless UI, Lucide React Icons
+
+## Project Information
+- Project: Techastra Hospital Management System (HMS)
+- Repository: https://github.com/surajorg48/Techastra-HMS
+- Owner: surajorg48
+- Email: info@lifebridgemedical.com
+
+## Crawling Guidance
+- Respect robots.txt directives
+- Sitemap: /sitemap.xml
+- This is a Single Page Application (SPA) — content is rendered client-side
+- API endpoints (/api/*) should not be crawled

@@ -1,0 +1,10 @@
+Contact: mailto:info@lifebridgemedical.com
+Contact: tel:+91-9876543210
+Expires: 2027-03-05T00:00:00.000Z
+Preferred-Languages: en
+Policy: /privacy
+Hiring: /contact
+
+# Lifebridge Medical Center — Security Contact
+# If you discover a security vulnerability, please contact us
+# responsibly at the email address above.

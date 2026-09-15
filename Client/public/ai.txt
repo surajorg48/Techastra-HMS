@@ -1,0 +1,29 @@
+# ai.txt — Lifebridge Medical Center
+# This file provides guidance for AI agents and crawlers.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /appointment-confirmation
+
+# Site Information
+Site-name: Lifebridge Medical Center
+Site-description: Premier multi-specialty hospital in New Delhi offering 15+ departments, AI-powered symptom checker, online appointment booking, 24/7 emergency services, and comprehensive healthcare solutions.
+Site-language: en
+Site-region: IN
+
+# Content Categories
+Topics: Healthcare, Hospital, Medical Services, Cardiology, Neurology, Orthopedics, Pediatrics, Oncology, Dermatology, Emergency Medicine, Health Blog, Patient Services, Online Appointments, AI Health Tools
+
+# Structured Data
+Schema-types: Hospital, MedicalOrganization, WebSite, MedicalClinic, Physician
+
+# Contact
+Contact-email: info@lifebridgemedical.com
+Contact-phone: +91-9876543210
+Emergency-phone: 108
+
+# References
+Sitemap: /sitemap.xml
+Robots: /robots.txt
+Humans: /humans.txt
